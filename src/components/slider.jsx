@@ -40,7 +40,7 @@ const Slider = () => {
         </div>
         <div className="carousel-inner">
           {data.map((movie, index) => (
-            <Link to={`/${movie.id}`} key={movie.id} className={`carousel-item c-item p-0 carousel-item ${index === 0 ? "active" : ""}`} data-bs-interval="10000">
+            <Link to={`/${movie.id}`} key={movie.id} className={`carousel-item c-item p-0 carousel-item ${index === 0 ? "active" : ""}`} data-bs-interval="5000">
               <img src={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`} className="d-block w-100 c-img" alt="..." />
               <div className="carousel-caption d-none d-md-flex flex-column justify-content-center c-content">
                 <h1>{movie.title}</h1>

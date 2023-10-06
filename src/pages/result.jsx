@@ -28,19 +28,21 @@ const SearchResult = () => {
           Kembali
         </Link>
       </div>
-      <div className="row  row-cols-4">
-        {results.map((movie) => (
-          <div className="col">
-            <Link to={`/${movie.id}`} className="card" key={movie.id}>
-              <div>
-                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="card-img-top" alt={movie.title} />
-                <div className="card-body mv-title d-flex  justify-content-center  align-items-center">
-                  <h5 className="card-title mv-body">{movie.title}</h5>
+      <div className="container">
+        <div className="row  row-cols-4">
+          {results.map((movie) => (
+            <div className="col">
+              <Link to={`/${movie.id}`} className="card" key={movie.id}>
+                <div>
+                  <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} className="card-img-top" alt={movie.title} />
+                  <div className="card-body mv-title d-flex  justify-content-center  align-items-center">
+                    <h5 className="card-title mv-body">{movie.title}</h5>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </div>
-        ))}
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
